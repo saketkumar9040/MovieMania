@@ -21,6 +21,7 @@ const MainNavigator = () => {
       <Stack.Screen
         name="SeatBooking"
         component={SeatBookingScreen}
+        options={{animation:"slide_from_bottom"}}
       />
     </Stack.Navigator>
   )
