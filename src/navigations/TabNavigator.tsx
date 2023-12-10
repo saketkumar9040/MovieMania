@@ -7,7 +7,7 @@ import { COLORS } from "../globals/colors";
 import { FONTSIZE } from "../globals/fonts";
 import { SPACING } from "../globals/styles";
 import CustomIconComponent from "../components/customIconComponent";
-import { View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 const Tabs = createBottomTabNavigator();
 
@@ -26,10 +26,12 @@ const TabNavigator = () => {
     >
       <Tabs.Screen name="Home" component={HomeScreen} options={{
         tabBarShowLabel:false,
-        tabBarIcon:({})=>{
+        tabBarIcon:({focused,color,size})=>{
           return (
-            <View>
-
+            <View style={styles.activeTabBackground}>
+               <CustomIconComponent
+                 name
+               />
             </View>
           )
         }
@@ -39,6 +41,14 @@ const TabNavigator = () => {
       <Tabs.Screen name="User" component={UserAccountScreen} />
     </Tabs.Navigator>
   )
-}
+};
+
+const styles = StyleSheet.create({
+      activeBarBackground:{
+        backgroundColor:COLORS.Black,
+        padding:SPACING.space_18,
+        borderRadius:SPACING.space_18*10
+      }
+});
 
 export default TabNavigator;
