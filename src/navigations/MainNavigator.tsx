@@ -11,10 +11,12 @@ const MainNavigator = () => {
       <Stack.Screen
         name="Main"
         component={TabNavigator}
+        options={{animation:"default"}}
       />
       <Stack.Screen
         name="MovieDetails"
         component={MovieDetailsScreen}
+        options={{animation:"slide_from_right"}}
       />
       <Stack.Screen
         name="SeatBooking"
