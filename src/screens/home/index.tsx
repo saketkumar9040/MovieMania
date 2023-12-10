@@ -1,4 +1,4 @@
-import { View, Text, TextInput, TouchableOpacity, Dimensions, ActivityIndicator } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Dimensions, ActivityIndicator, StatusBar } from 'react-native';
 import React, { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import FontAwesome from 'react-native-vector-icons/FontAwesome5';
@@ -30,10 +30,15 @@ const HomeScreen = ({ navigationt, route }: any) => {
         style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: COLORS.Black }}
       />
     )
-  }
+  };
 
   return (
     <SafeAreaView style={styles.mainContainer}>
+      <StatusBar
+        animated={true}
+        backgroundColor={COLORS.Black}
+        barStyle="dark-content"
+      />
       <View style={styles.searchContainer}>
         <TextInput
           style={styles.searchTextInput}
