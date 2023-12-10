@@ -5,7 +5,7 @@ import TicketScreen from "../screens/ticket";
 import UserAccountScreen from "../screens/userAccount";
 import { COLORS } from "../globals/colors";
 import { FONTSIZE } from "../globals/fonts";
-import { SPACING } from "../globals/styles";
+import { BORDERRADIUS, SPACING } from "../globals/styles";
 import CustomIconComponent from "../components/customIconComponent";
 import { StyleSheet, View } from "react-native";
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -36,7 +36,7 @@ const TabNavigator = () => {
               <MaterialCommunityIcons
                 name="movie-open-play-outline"
                 size={FONTSIZE.size_30}
-                color={COLORS.White}
+                color={focused?COLORS.Orange:COLORS.White}
               />
             </View>
           )
@@ -49,8 +49,8 @@ const TabNavigator = () => {
             <View style={styles.activeTabBackground}>
               <MaterialIcons
                 name="search"
-                size={FONTSIZE.size_30}
-                color={COLORS.White}
+                size={FONTSIZE.size_35}
+                color={focused?COLORS.Orange:COLORS.White}
               />
             </View>
           )
@@ -64,7 +64,7 @@ const TabNavigator = () => {
               <Ionicons
                 name="ticket-outline"
                 size={FONTSIZE.size_40}
-                color={COLORS.White}
+                color={focused?COLORS.Orange:COLORS.White}
               />
             </View>
           )
@@ -78,7 +78,7 @@ const TabNavigator = () => {
               <FontAwesome
                 name="user-o"
                 size={FONTSIZE.size_30}
-                color={COLORS.White}
+                color={focused?COLORS.Orange:COLORS.White}
               />
             </View>
           )
@@ -89,10 +89,10 @@ const TabNavigator = () => {
 };
 
 const styles = StyleSheet.create({
-  activeBarBackground: {
+  activeTabBackground: {
     backgroundColor: COLORS.Black,
     padding: SPACING.space_18,
-    borderRadius: SPACING.space_18 * 10
+    borderRadius: BORDERRADIUS.radius_20
   }
 });
 
