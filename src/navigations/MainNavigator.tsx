@@ -7,13 +7,22 @@ const Stack = createNativeStackNavigator();
 
 const MainNavigator = () => {
   return (
-      <Stack.Navigator>
-        <Stack.Screen name="Main" component={TabNavigator} options={{ headerShown: false }}  />
-        <Stack.Screen name="MovieDetails" component={MovieDetailsScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="SeatBooking" component={SeatBookingScreen} options={{ headerShown: false }} />
-      </Stack.Navigator>
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen
+        name="Main"
+        component={TabNavigator}
+      />
+      <Stack.Screen
+        name="MovieDetails"
+        component={MovieDetailsScreen}
+      />
+      <Stack.Screen
+        name="SeatBooking"
+        component={SeatBookingScreen}
+      />
+    </Stack.Navigator>
   )
-}
+};
 
 export default MainNavigator;
 

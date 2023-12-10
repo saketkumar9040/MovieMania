@@ -11,9 +11,15 @@ const AuthNavigator = () => {
     return (
         <NavigationContainer>
             {!isAuth ? (
-                <Stack.Navigator>
-                    <Stack.Screen name='Login' component={LoginScreen} options={{ headerShown: false }} />
-                    <Stack.Screen name='SignUp' component={SignUpScreen} options={{ headerShown: false }} />
+                <Stack.Navigator screenOptions={{ headerShown: false }}>
+                    <Stack.Screen
+                        name='Login'
+                        component={LoginScreen}
+                    />
+                    <Stack.Screen
+                        name='SignUp'
+                        component={SignUpScreen}
+                    />
                 </Stack.Navigator>
             ) : (
                 <MainNavigator />
@@ -23,4 +29,4 @@ const AuthNavigator = () => {
     )
 }
 
-export default AuthNavigator
+export default AuthNavigator;
