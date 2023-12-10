@@ -5,9 +5,9 @@ export const popularMoviesURL: string = `https://api.themoviedb.org/3/movie/popu
 export const searchMovies = (keyword: string) => {
     return `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${keyword}`;
 };
-export const movieDetails = (id:number) => {
+export const movieDetails = (id: number) => {
     return `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`;
 };
-export const movieCastDetails = (id:number) => {
-    return ``
+export const movieCastDetails = (id: number) => {
+    return `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${apiKey}`;
 }
