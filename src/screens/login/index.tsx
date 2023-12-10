@@ -1,9 +1,11 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from 'react-native';
+import React from 'react';
+
+import styles from './style';
 
 const LoginScreen = () => {
   return (
-    <View>
+    <View style={styles.mainContainer}>
       <Text>LoginScreen</Text>
     </View>
   )
