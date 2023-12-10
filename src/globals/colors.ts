@@ -1,4 +1,3 @@
-
 interface Color {
     Black: String;
     BlackRGB10: String;
@@ -13,6 +12,7 @@ interface Color {
     WhiteRGBA32: String;
     WhiteRGBA15: String;
 };
+
 export const COLORS: Color = {
     Black: "#000000",
     BlackRGB10: "rgba(0,0,0,0.1)",
