@@ -8,6 +8,7 @@ import { FONTSIZE } from "../globals/fonts";
 import { SPACING } from "../globals/styles";
 import CustomIconComponent from "../components/customIconComponent";
 import { StyleSheet, View } from "react-native";
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const Tabs = createBottomTabNavigator();
 
@@ -17,38 +18,79 @@ const TabNavigator = () => {
       screenOptions={{
         headerShown: false,
         tabBarHideOnKeyboard: true,
-        tabBarStyle:{
-          backgroundColor:COLORS.Black,
-          borderTopWidth:0,
-          height:SPACING.space_10*10,
+        tabBarStyle: {
+          backgroundColor: COLORS.Black,
+          borderTopWidth: 0,
+          height: SPACING.space_10 * 10,
         }
       }}
     >
       <Tabs.Screen name="Home" component={HomeScreen} options={{
-        tabBarShowLabel:false,
-        tabBarIcon:({focused,color,size})=>{
+        tabBarShowLabel: false,
+        tabBarIcon: ({ focused, color, size }) => {
           return (
             <View style={styles.activeTabBackground}>
-               <CustomIconComponent
-                 name
-               />
+              <MaterialIcons
+                name="video-library"
+                size={FONTSIZE.size_30}
+                color={COLORS.White}
+              />
             </View>
           )
         }
-      }}/>
-      <Tabs.Screen name="Search" component={SearchScreen} />
-      <Tabs.Screen name="Ticket" component={TicketScreen} />
-      <Tabs.Screen name="User" component={UserAccountScreen} />
+      }} />
+      <Tabs.Screen name="Search" component={SearchScreen} options={{
+        tabBarShowLabel: false,
+        tabBarIcon: ({ focused, color, size }) => {
+          return (
+            <View style={styles.activeTabBackground}>
+              <MaterialIcons
+                name="video-library"
+                size={FONTSIZE.size_30}
+                color={COLORS.White}
+              />
+            </View>
+          )
+        }
+      }} />
+      <Tabs.Screen name="Ticket" component={TicketScreen} options={{
+        tabBarShowLabel: false,
+        tabBarIcon: ({ focused, color, size }) => {
+          return (
+            <View style={styles.activeTabBackground}>
+              <MaterialIcons
+                name="video-library"
+                size={FONTSIZE.size_30}
+                color={COLORS.White}
+              />
+            </View>
+          )
+        }
+      }} />
+      <Tabs.Screen name="User" component={UserAccountScreen} options={{
+        tabBarShowLabel: false,
+        tabBarIcon: ({ focused, color, size }) => {
+          return (
+            <View style={styles.activeTabBackground}>
+              <MaterialIcons
+                name="video-library"
+                size={FONTSIZE.size_30}
+                color={COLORS.White}
+              />
+            </View>
+          )
+        }
+      }} />
     </Tabs.Navigator>
   )
 };
 
 const styles = StyleSheet.create({
-      activeBarBackground:{
-        backgroundColor:COLORS.Black,
-        padding:SPACING.space_18,
-        borderRadius:SPACING.space_18*10
-      }
+  activeBarBackground: {
+    backgroundColor: COLORS.Black,
+    padding: SPACING.space_18,
+    borderRadius: SPACING.space_18 * 10
+  }
 });
 
 export default TabNavigator;
