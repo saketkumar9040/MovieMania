@@ -20,6 +20,7 @@ interface FontSize {
     size_20: number;
     size_24: number;
     size_30: number;
+    size_40: number;
 }
 
 export const FONTFAMILY: FontFamily = {
@@ -44,4 +45,5 @@ export const FONTSIZE: FontSize = {
     size_20: 20,
     size_24: 24,
     size_30: 30,
+    size_40: 40,
 };
