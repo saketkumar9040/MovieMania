@@ -9,6 +9,8 @@ import { SPACING } from "../globals/styles";
 import CustomIconComponent from "../components/customIconComponent";
 import { StyleSheet, View } from "react-native";
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 const Tabs = createBottomTabNavigator();
 
@@ -45,7 +47,7 @@ const TabNavigator = () => {
           return (
             <View style={styles.activeTabBackground}>
               <MaterialIcons
-                name="video-library"
+                name="search"
                 size={FONTSIZE.size_30}
                 color={COLORS.White}
               />
@@ -58,8 +60,8 @@ const TabNavigator = () => {
         tabBarIcon: ({ focused, color, size }) => {
           return (
             <View style={styles.activeTabBackground}>
-              <MaterialIcons
-                name="video-library"
+              <Ionicons
+                name="ticket-outline"
                 size={FONTSIZE.size_30}
                 color={COLORS.White}
               />
@@ -72,8 +74,8 @@ const TabNavigator = () => {
         tabBarIcon: ({ focused, color, size }) => {
           return (
             <View style={styles.activeTabBackground}>
-              <MaterialIcons
-                name="video-library"
+              <FontAwesome
+                name="user-o"
                 size={FONTSIZE.size_30}
                 color={COLORS.White}
               />
