@@ -7,7 +7,7 @@ import SignUpScreen from '../screens/signUp';
 const Stack = createNativeStackNavigator();
 
 const AuthNavigator = () => {
-    const isAuth = false;
+    const isAuth = true;
     return (
         <NavigationContainer>
             {!isAuth ? (

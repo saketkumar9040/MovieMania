@@ -21,4 +21,4 @@ const TabNavigator = () => {
   )
 }
 
-export default TabNavigator
+export default TabNavigator;
